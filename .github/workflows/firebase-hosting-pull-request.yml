@@ -8,11 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_UI_COLOR_PICKER_70C8D }}'
-          projectId: ui-color-picker-70c8d
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_COLOR_PICKER_4CDE5 }}'
+          projectId: color-picker-4cde5
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
